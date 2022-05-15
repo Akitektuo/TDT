@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc7cd64e-2e31-45af-8275-5c9af78a8b51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BaseAuthorizedPage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BasePage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/test/AddFloorBoundaryTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/test/OpenEditBuildingDialogTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/WebDriverExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/FloorsPage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/description.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/map.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/SamplePage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BuildingsPage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BaseAuthorizedPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BaseAuthorizedPage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BasePage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BasePage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BuildingsPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BuildingsPage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/test/TestBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/test/TestBase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertiesLoader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertiesLoader.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertyValues.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertyValues.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/WebDriverExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/WebDriverExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ubb/mno/page/BaseAuthorizedPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ubb/mno/page/BaseAuthorizedPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ubb/mno/page/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ubb/mno/page/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ubb/mno/page/BuildingsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ubb/mno/page/BuildingsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ubb/mno/test/AddFloorBoundaryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ubb/mno/test/AddFloorBoundaryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ubb/mno/test/OpenEditBuildingDialogTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ubb/mno/test/OpenEditBuildingDialogTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ubb/mno/util/WebDriverExtensionsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ubb/mno/util/WebDriverExtensionsKt.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +32,8 @@
       <list>
         <option value="Kotlin Enum" />
         <option value="Class" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -47,24 +51,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Programming/University - Others/TDT/src/test/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programming\University - Others\TDT\src\test\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programming\University - Others\TDT\src\test\resources" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddFloorBoundaryTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TDT" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ubb.mno.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="ubb.mno.test" />
+      <option name="MAIN_CLASS_NAME" value="ubb.mno.test.AddFloorBoundaryTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -73,7 +103,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="TestNG.AddFloorBoundaryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -88,7 +118,8 @@
       <workItem from="1652208032869" duration="3323000" />
       <workItem from="1652533838031" duration="664000" />
       <workItem from="1652534566447" duration="3313000" />
-      <workItem from="1652597353060" duration="7975000" />
+      <workItem from="1652597353060" duration="8795000" />
+      <workItem from="1652627731018" duration="11621000" />
     </task>
     <servers />
   </component>
@@ -110,24 +141,5 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BuildingsPage.kt</url>
-          <line>30</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BuildingsPage.kt</url>
-          <line>35</line>
-          <properties>
-            <option name="lambda-ordinal" value="0" />
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

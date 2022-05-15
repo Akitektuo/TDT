@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver
 import ubb.mno.util.PropertiesLoader
 import ubb.mno.util.PropertyValues
 
-abstract class BaseAuthorizedPage(driver: WebDriver) : BasePage(driver) {
+abstract class BaseAuthorizedPage(driver: WebDriver, skipLogin: Boolean = false) : BasePage(driver, skipLogin) {
     override fun afterLoginRendered() {
         val emailField = getEmailField()
         val passwordField = getPasswordField()

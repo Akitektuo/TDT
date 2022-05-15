@@ -4,9 +4,10 @@ import org.openqa.selenium.WebDriver
 import ubb.mno.util.PropertiesLoader
 import ubb.mno.util.PropertyValues
 
-abstract class BasePage(protected val driver: WebDriver) {
+abstract class BasePage(protected val driver: WebDriver, private val skipLogin: Boolean = false) {
     init {
-        navigate()
+        if (!skipLogin)
+            navigate()
     }
 
     private fun navigate() {
@@ -23,7 +24,7 @@ abstract class BasePage(protected val driver: WebDriver) {
 
     fun wait(seconds: Int = 1) = Thread.sleep(seconds * 1000L)
 
-    fun navigate(path: String) {
+    fun navigate(path: String = "") {
         driver.get("https://lighthouse-demo.evozon.com/$path")
         wait()
     }

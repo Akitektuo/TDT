@@ -3,8 +3,9 @@ package ubb.mno.page
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
+import ubb.mno.util.getTextContent
 
-class BuildingsPage(driver: WebDriver) : BaseAuthorizedPage(driver) {
+class BuildingsPage(driver: WebDriver, skipLogin: Boolean = false) : BaseAuthorizedPage(driver, skipLogin) {
 
     override fun afterLogin() {
         navigate("buildings")
@@ -21,19 +22,39 @@ class BuildingsPage(driver: WebDriver) : BaseAuthorizedPage(driver) {
         By.cssSelector("div.MuiDialog-root:not([aria-hidden]) input")
     )
 
+    fun removeFloor(buildingName: String, floorName: String) {
+        lookForFloorRow(buildingName, floorName)?.openActionsAndSelect("Delete")
+        wait()
+        confirmDelete()
+    }
+
+    fun editFloor(buildingName: String, floorName: String) =
+        lookForFloorRow(buildingName, floorName)?.openActionsAndSelect("Edit")
+
+    private fun confirmDelete() =
+        driver.findElement(By.cssSelector(".MuiDialog-root button.MuiButton-contained")).click()
+
+    private fun lookForFloorRow(buildingName: String, floorName: String): WebElement? {
+        lookForBuildingRow(buildingName)?.clickExpand()
+        wait()
+        return getFloorRow(floorName)
+    }
+
     private fun lookForBuildingRow(buildingName: String): WebElement? {
         val nextPageButton = getNextPageButton()
         var buildingRow = getBuildingRow(buildingName)
 
-        while (buildingRow == null && nextPageButton.clickNextPage())
+        while (buildingRow == null && nextPageButton.clickNextPage()) {
+            wait()
             buildingRow = getBuildingRow(buildingName)
+        }
 
         return buildingRow
     }
 
     private fun getBuildingRow(buildingName: String): WebElement? =
         driver.findElements(By.cssSelector("tr.MuiTableRow-hover"))
-            .firstOrNull { it.getBuildingName().text == buildingName }
+            .firstOrNull { it.getBuildingName().getTextContent() == buildingName }
 
     private fun WebElement.clickNextPage() = isEnabled.also { if (it) click() }
 
@@ -52,5 +73,13 @@ class BuildingsPage(driver: WebDriver) : BaseAuthorizedPage(driver) {
         By.cssSelector("div.MuiPopover-root:not([aria-hidden]) > div.MuiPaper-root > ul > li")
     )
 
-    private fun List<WebElement>.selectAction(actionName: String) = first { it.text == actionName }.click()
+    private fun List<WebElement>.selectAction(actionName: String) = first { it.getTextContent() == actionName }.click()
+
+    private fun WebElement.clickExpand() = findElement(By.cssSelector("button")).click()
+
+    private fun getFloorRow(floorName: String): WebElement? =
+        driver.findElements(By.cssSelector(".MuiTableCell-body > div > div > div tbody > tr"))
+            .firstOrNull { it.getFloorName().getTextContent() == floorName }
+
+    private fun WebElement.getFloorName() = findElement(By.cssSelector("td"))
 }
