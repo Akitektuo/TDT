@@ -10,9 +10,10 @@ class OpenEditBuildingDialogTest : TestBase() {
     @Test
     fun openRobotParadiseEditDialog() {
         val buildingName = "Robot Paradise"
+        val buildingSafeDistance = "1"
         val buildingsPage = BuildingsPage(driver)
 
-        buildingsPage.openEditBuildingDialog(buildingName)
+        buildingsPage.openEditBuildingDialog(buildingName, buildingSafeDistance)
 
         assertEquals("Building information", buildingsPage.getDialogTitle()?.getTextContent())
         assertEquals(buildingName, buildingsPage.getDialogBuildingNameInput()?.getInputValue())
