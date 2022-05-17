@@ -3,42 +3,44 @@ package ubb.mno.page
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
+import ubb.mno.util.clearInput
 import ubb.mno.util.getTextContent
 
 class BuildingsPage(driver: WebDriver, skipLogin: Boolean = false) : BaseAuthorizedPage(driver, skipLogin) {
-
     override fun afterLogin() {
         navigate("buildings")
     }
 
+    fun setBuildingName(buildingName: String) {
+        getDialogBuildingNameInput()?.clearInput()
+        getDialogBuildingNameInput()?.sendKeys(buildingName)
+    }
+    fun setSafeDistance(safeDistance: String) {
+        getDialogSafeDistanceInput()?.clearInput()
+        getDialogSafeDistanceInput()?.sendKeys(safeDistance)
+    }
     fun openEditBuildingDialog(buildingName: String) = lookForBuildingRow(buildingName)
         ?.openActionsAndSelect("Edit Building")
 
-    fun getDialogTitle(): WebElement? = driver.findElement(
-        By.cssSelector("div.MuiDialog-root:not([aria-hidden]) h6 > strong")
-    )
+    fun closeEditBuildingDialog() = getCloseDialogButton()?.click();
+
+    fun saveBuilding() = getSaveEditedBuildingButton()?.click();
 
     fun getDialogBuildingNameInput(): WebElement? = driver.findElement(
         By.cssSelector("div.MuiDialog-root:not([aria-hidden]) input")
     )
 
-    fun removeFloor(buildingName: String, floorName: String) {
-        lookForFloorRow(buildingName, floorName)?.openActionsAndSelect("Delete")
-        wait()
-        confirmDelete()
-    }
+    fun getDialogSafeDistanceInput(): WebElement? = driver.findElement(
+        By.cssSelector("div.MuiDialog-root:not([aria-hidden]) #safeDistance")
+    )
 
-    fun editFloor(buildingName: String, floorName: String) =
-        lookForFloorRow(buildingName, floorName)?.openActionsAndSelect("Edit")
+    fun getSaveEditedBuildingButton(): WebElement? = driver.findElement(
+        By.cssSelector("div.MuiDialog-root:not([aria-hidden]) button:not([aria-label])")
+    )
 
-    private fun confirmDelete() =
-        driver.findElement(By.cssSelector(".MuiDialog-root button.MuiButton-contained")).click()
-
-    private fun lookForFloorRow(buildingName: String, floorName: String): WebElement? {
-        lookForBuildingRow(buildingName)?.clickExpand()
-        wait()
-        return getFloorRow(floorName)
-    }
+    private fun getCloseDialogButton(): WebElement? = driver.findElement(
+        By.cssSelector("div.MuiDialog-root:not([aria-hidden]) button")
+    )
 
     private fun lookForBuildingRow(buildingName: String): WebElement? {
         val nextPageButton = getNextPageButton()
@@ -74,12 +76,4 @@ class BuildingsPage(driver: WebDriver, skipLogin: Boolean = false) : BaseAuthori
     )
 
     private fun List<WebElement>.selectAction(actionName: String) = first { it.getTextContent() == actionName }.click()
-
-    private fun WebElement.clickExpand() = findElement(By.cssSelector("button")).click()
-
-    private fun getFloorRow(floorName: String): WebElement? =
-        driver.findElements(By.cssSelector(".MuiTableCell-body > div > div > div tbody > tr"))
-            .firstOrNull { it.getFloorName().getTextContent() == floorName }
-
-    private fun WebElement.getFloorName() = findElement(By.cssSelector("td"))
 }

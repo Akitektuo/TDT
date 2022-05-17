@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="ubb.mno.test.EditBuildingTest">
+        <methods>
+          <include name="editBuilding_negativeSafeDistance_savedAsPositive"/>
+          <include name="afterMethod"/>
+          <include name="editBuilding_veryLargeSafeDistance_hasBoundaries"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- ubb.mno.test.EditBuildingTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
