@@ -19,7 +19,7 @@ abstract class TestBase {
             PropertiesLoader.get(PropertyValues.PATH_DRIVER) + PropertiesLoader.get(PropertyValues.EXE_DRIVER)
         )
         driver = ChromeDriver()
-        with(driver.manage()) {
+        with(driver.manage() ) {
             timeouts().implicitlyWait(10, TimeUnit.SECONDS)
             window().maximize()
         }
