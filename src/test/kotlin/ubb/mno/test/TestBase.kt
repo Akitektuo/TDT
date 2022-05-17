@@ -8,7 +8,7 @@ import ubb.mno.util.PropertiesLoader
 import ubb.mno.util.PropertyValues
 import java.util.concurrent.TimeUnit
 
-class TestBase {
+open class TestBase {
     lateinit var driver: WebDriver
         private set
 

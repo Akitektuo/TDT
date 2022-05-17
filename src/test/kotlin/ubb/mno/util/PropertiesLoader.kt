@@ -13,7 +13,7 @@ object PropertiesLoader {
     }
 
     fun get(property: PropertyValues): String {
-        properties?.let { load() }
+        properties?:load()
 
         return properties?.getProperty(property.key) ?: ""
     }

@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc7cd64e-2e31-45af-8275-5c9af78a8b51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/test/TestBase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertiesLoader.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertyValues.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BaseAuthorizedPage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BasePage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/BookingsPage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/test/OpenEditBuildingDialogTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/WebDriverExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/page/SamplePage.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/test/TestBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/test/TestBase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertiesLoader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertiesLoader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertyValues.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ubb/mno/util/PropertyValues.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Enum" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -44,19 +46,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin" />
+  </component>
+  <component name="RunManager">
+    <configuration name="OpenEditBuildingDialogTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TDT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ubb.mno.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ubb.mno.test" />
+      <option name="MAIN_CLASS_NAME" value="ubb.mno.test.OpenEditBuildingDialogTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.OpenEditBuildingDialogTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,6 +83,8 @@
       <option name="presentableId" value="Default" />
       <updated>1652208031352</updated>
       <workItem from="1652208032869" duration="2841000" />
+      <workItem from="1652605875480" duration="22364000" />
+      <workItem from="1652776252469" duration="64000" />
     </task>
     <servers />
   </component>
@@ -87,5 +106,9 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
