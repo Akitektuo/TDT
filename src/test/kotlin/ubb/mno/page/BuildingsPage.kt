@@ -3,6 +3,8 @@ package ubb.mno.page
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
+import org.openqa.selenium.interactions.Actions
+
 
 class BuildingsPage(driver: WebDriver) : BaseAuthorizedPage(driver) {
     override fun afterLogin() {
@@ -11,6 +13,23 @@ class BuildingsPage(driver: WebDriver) : BaseAuthorizedPage(driver) {
 
     fun openEditBuildingDialog(buildingName: String, buildingSafeDistance: String) =
         lookForBuildingRow(buildingName, buildingSafeDistance)?.openActionsAndSelect("Edit Building")
+
+    fun deleteBuilding(buildingName: String, buildingSafeDistance: String) {
+        lookForBuildingRow(buildingName, buildingSafeDistance)?.openActionsAndSelect("Delete Building")
+
+//        val wait = WebDriverWait(driver, 10)
+//        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.MuiDialog-root div.MuiBox-root button")))
+        Thread.sleep(6000L)
+//        val deleteButton = this.getElementByCss("div.MuiDialog-root:not([aria-hidden]) button:not([aria-label])")
+//        val deleteButton = this.getElementByCss("div.MuiDialog-root div.MuiBox-root button")
+        val deleteButton = this.getElementByCss("div.MuiDialog-root button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary")
+        val actions = Actions(driver)
+
+        actions.moveToElement(deleteButton).click().perform()
+//        val executor = driver as JavascriptExecutor
+//        executor.executeScript("arguments[0].click();", deleteButton)
+//        deleteButton.click()
+    }
 
     fun getDialogTitle(): WebElement? = driver.findElement(
         By.cssSelector("div.MuiDialog-root:not([aria-hidden]) h6 > strong")
@@ -76,3 +95,4 @@ class BuildingsPage(driver: WebDriver) : BaseAuthorizedPage(driver) {
 
     fun getSaveNewBuildingButton(): WebElement = driver.findElement(By.cssSelector("button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary"))
 }
+
